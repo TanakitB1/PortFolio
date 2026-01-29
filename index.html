@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าหลัก - ธนกฤต แซ่จ๋าว</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-blue': '#1e3a8a',
+                        'custom-yellow': '#facc15',
+                        'custom-text': '#1f2937',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-custom-text font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold font-head text-custom-blue tracking-wider hover:text-custom-yellow transition">
+                <i class="fas fa-code text-custom-yellow mr-2"></i>PORTFOLIO
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-head text-lg">
+                <a href="index.html" class="text-custom-blue font-bold border-b-2 border-custom-yellow">หน้าหลัก</a>
+                <a href="about.html" class="hover:text-custom-yellow transition font-medium">เกี่ยวกับฉัน</a>
+                <a href="certificates.html" class="hover:text-custom-yellow transition font-medium">เกียรติบัตร</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-custom-blue text-2xl focus:outline-none hover:text-custom-yellow transition">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t absolute w-full left-0 shadow-lg">
+            <a href="index.html" class="block py-3 px-6 bg-blue-50 text-custom-blue font-bold">หน้าหลัก</a>
+            <a href="about.html" class="block py-3 px-6 hover:bg-gray-50">เกี่ยวกับฉัน</a>
+            <a href="certificates.html" class="block py-3 px-6 hover:bg-gray-50">เกียรติบัตร</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden bg-dot-pattern">
+        
+        <!-- Background Shapes -->
+        <div class="absolute top-20 right-0 w-72 h-72 bg-blue-100/50 rounded-full blur-3xl mix-blend-multiply filter opacity-70 animate-blob"></div>
+        <div class="absolute top-40 right-40 w-72 h-72 bg-yellow-100/50 rounded-full blur-3xl mix-blend-multiply filter opacity-70 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-20 left-10 w-96 h-96 bg-blue-50/50 rounded-full blur-3xl mix-blend-multiply filter opacity-70 animate-blob animation-delay-4000"></div>
+
+        <div class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between relative z-10">
+            
+            <!-- Left Content -->
+            <div class="md:w-1/2 text-center md:text-left mt-12 md:mt-0 fade-in-up">
+                <div class="inline-block px-4 py-1.5 bg-blue-50 text-custom-blue rounded-full text-sm font-bold mb-6 shadow-sm border border-blue-100">
+                    👋 สวัสดีครับ ผมชื่อ
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold text-custom-blue mb-4 leading-tight font-head">
+                    ธนกฤต <br> <span class="text-custom-yellow relative">แซ่จ๋าว
+                        <svg class="absolute w-full h-3 -bottom-1 left-0 text-yellow-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+                             <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="8" fill="none" />
+                        </svg>
+                    </span>
+                </h1>
+                
+                <!-- Typewriter Effect -->
+                <h2 class="text-2xl md:text-3xl text-gray-700 font-medium mb-6 font-head h-10">
+                    I am a <span id="typewriter" class="text-custom-blue font-bold"></span><span class="cursor-blink">|</span>
+                </h2>
+
+                <p class="text-gray-500 text-lg mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    "มุ่งมั่นพัฒนาทักษะด้าน Web Development และพร้อมเรียนรู้สิ่งใหม่ๆ เพื่อก้าวสู่การเป็นนักพัฒนามืออาชีพ"
+                </p>
+
+                <!-- Social Links -->
+                <div class="flex justify-center md:justify-start gap-4 mb-8">
+                    <a href="https://github.com/TanakitB1" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="mailto:tanakritmkk@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:0638861685" class="social-icon"><i class="fas fa-phone"></i></a>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start mb-6">
+                    <a href="about.html" class="bg-custom-blue text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-blue-800 transition transform hover:scale-105 hover:shadow-xl">
+                        รู้จักผมให้มากขึ้น <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="certificates.html" class="group border-2 border-custom-blue text-custom-blue px-8 py-3 rounded-full font-bold hover:bg-custom-blue hover:text-white transition">
+                        ดูผลงาน <i class="fas fa-certificate ml-2 group-hover:rotate-12 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right Content (Image & Orbit) -->
+            <div class="md:w-1/2 flex justify-center fade-in-up relative mt-10 md:mt-0">
+                <div class="relative w-80 h-80 md:w-[28rem] md:h-[28rem] flex items-center justify-center">
+                    
+                    <!-- Profile Image -->
+                    <!-- เพิ่ม class translate-y-8 เพื่อขยับภาพลงมา -->
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-gray-200 rounded-full overflow-hidden border-[6px] border-white shadow-2xl relative z-20 translate-y-8">
+                         <!-- ปรับ src ให้ใช้ / และเพิ่ม class object-top เพื่อให้เห็นหน้า -->
+                         <img src="../Image/Me.jpg" alt="Profile" class="w-full h-full object-cover object-top transform hover:scale-110 transition duration-700">
+                    </div>
+
+                    <!-- Orbiting Icons -->
+                    <div class="absolute w-full h-full animate-spin-slow z-10">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-6 bg-white p-3 rounded-full shadow-lg">
+                            <i class="fab fa-react text-3xl text-blue-400"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-6 bg-white p-3 rounded-full shadow-lg">
+                            <i class="fab fa-html5 text-3xl text-orange-500"></i>
+                        </div>
+                        <div class="absolute top-1/2 left-0 -translate-x-6 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg">
+                            <i class="fab fa-js text-3xl text-yellow-400"></i>
+                        </div>
+                        <div class="absolute top-1/2 right-0 translate-x-6 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg">
+                            <i class="fab fa-css3-alt text-3xl text-blue-600"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Decorative Circles -->
+                    <div class="absolute inset-4 border-2 border-dashed border-gray-300 rounded-full animate-spin-reverse-slow"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block text-custom-blue/50">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

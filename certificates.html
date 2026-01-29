@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกียรติบัตร - ธนกฤต แซ่จ๋าว</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-blue': '#1e3a8a',
+                        'custom-yellow': '#facc15',
+                        'custom-text': '#1f2937',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-custom-text font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold font-head text-custom-blue tracking-wider hover:text-custom-yellow transition">
+                <i class="fas fa-code text-custom-yellow mr-2"></i>PORTFOLIO
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-head text-lg">
+                <a href="index.html" class="hover:text-custom-yellow transition font-medium">หน้าหลัก</a>
+                <a href="about.html" class="hover:text-custom-yellow transition font-medium">เกี่ยวกับฉัน</a>
+                <a href="certificates.html" class="text-custom-blue font-bold border-b-2 border-custom-yellow">เกียรติบัตร</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-custom-blue text-2xl focus:outline-none hover:text-custom-yellow transition">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t absolute w-full left-0 shadow-lg">
+            <a href="index.html" class="block py-3 px-6 hover:bg-gray-50">หน้าหลัก</a>
+            <a href="about.html" class="block py-3 px-6 hover:bg-gray-50">เกี่ยวกับฉัน</a>
+            <a href="certificates.html" class="block py-3 px-6 bg-blue-50 text-custom-blue font-bold">เกียรติบัตร</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-6 pt-32 pb-16">
+        <div class="text-center mb-12 fade-in-up">
+            <h2 class="text-4xl font-bold text-custom-blue mb-4 font-head">เกียรติบัตร & กิจกรรม</h2>
+            <p class="text-gray-500 mb-6">ผลงานและความสำเร็จด้านเทคโนโลยีและสังคม</p>
+
+            <!-- 🔴 เพิ่มปุ่มดาวน์โหลดเอกสารกิจกรรมในมหาลัย ตรงนี้ครับ -->
+            <div class="flex justify-center">
+                <a href="..\File\กิจกรรม_ มหาวิทยาลัยพะเยา.pdf" target="_blank" class="inline-flex items-center gap-2 bg-white border-2 border-custom-blue text-custom-blue px-6 py-2 rounded-full font-bold hover:bg-custom-blue hover:text-white transition shadow-sm">
+                    <i class="fas fa-folder-open"></i> ดาวน์โหลดเอกสารกิจกรรมในมหาลัย
+                </a>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Card 1: ThaiLLM Certificate -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2 border-t-4 border-custom-blue fade-in-up">
+                <div class="h-56 bg-blue-50 flex items-center justify-center relative group overflow-hidden">
+                    <img src="..\Image\LLM.png" alt="ThaiLLM Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    
+                    
+                    <div class="absolute top-4 right-4 bg-white/90 p-2 rounded-full shadow-sm z-10 pointer-events-none">
+                        <i class="fas fa-robot text-custom-blue text-xl"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-blue-100 text-custom-blue text-xs font-bold px-2 py-1 rounded uppercase">AI & Data</span>
+                        <span class="text-xs text-gray-400">กรกฎาคม 2568</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-custom-blue mb-2 leading-tight">Thai Large Language Model (ThaiLLM)</h3>
+                    <p class="text-gray-600 text-sm mb-4">ผ่านหลักสูตรการใช้ LLM ผ่านการเชื่อมต่อ API ด้วยทักษะระดับ "นักพัฒนาระบบ AI เบื้องต้น" จาก NECTEC และ สวทช.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: AI Medical Imaging Certificate -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2 border-t-4 border-custom-blue fade-in-up" style="animation-delay: 0.1s;">
+                <div class="h-56 bg-blue-50 flex items-center justify-center relative group overflow-hidden">
+                    <img src="..\Image\AI_Medical.png" alt="Medical AI Certificate" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    
+
+                    <div class="absolute top-4 right-4 bg-white/90 p-2 rounded-full shadow-sm z-10 pointer-events-none">
+                        <i class="fas fa-heartbeat text-red-500 text-xl"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded uppercase">Workshop</span>
+                        <span class="text-xs text-gray-400">กรกฎาคม 2568</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-custom-blue mb-2 leading-tight">ปัญญาประดิษฐ์กับภาพทางการแพทย์</h3>
+                    <p class="text-gray-600 text-sm mb-4">เข้าร่วมอบรมเชิงปฏิบัติการ "AI with Medical Imaging ครั้งที่ ๒/๒๕๖๘" ณ มหาวิทยาลัยพะเยา จัดโดย NECTEC</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Community Service (Jit Arsa) -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2 border-t-4 border-custom-yellow fade-in-up" style="animation-delay: 0.2s;">
+                <div class="h-56 bg-yellow-50 flex items-center justify-center relative group overflow-hidden">
+                    <img src="..\Image\leader.jpg" alt="Community Service" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                    <div class="absolute top-4 right-4 bg-white/90 p-2 rounded-full shadow-sm z-10 pointer-events-none">
+                        <i class="fas fa-hands-helping text-custom-yellow text-xl"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="bg-yellow-100 text-yellow-700 text-xs font-bold px-2 py-1 rounded uppercase">Volunteer</span>
+                        <span class="text-xs text-gray-400">2020 - 2023</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-custom-blue mb-2 leading-tight">ผู้นำกิจกรรม</h3>
+                    <p class="text-gray-600 text-sm mb-4">ผู้นำชุมชนกิจกรรม มีส่วนร่วมในการวางแผนและดำเนินกิจกรรมในมหาวิทยาลัย</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

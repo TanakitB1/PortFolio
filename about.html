@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกี่ยวกับฉัน - ธนกฤต แซ่จ๋าว</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-blue': '#1e3a8a',
+                        'custom-yellow': '#facc15',
+                        'custom-text': '#1f2937',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-custom-text font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold font-head text-custom-blue tracking-wider hover:text-custom-yellow transition">
+                <i class="fas fa-code text-custom-yellow mr-2"></i>PORTFOLIO
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-head text-lg">
+                <a href="index.html" class="hover:text-custom-yellow transition font-medium">หน้าหลัก</a>
+                <a href="about.html" class="text-custom-blue font-bold border-b-2 border-custom-yellow">เกี่ยวกับฉัน</a>
+                <a href="certificates.html" class="hover:text-custom-yellow transition font-medium">เกียรติบัตร</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-custom-blue text-2xl focus:outline-none hover:text-custom-yellow transition">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t absolute w-full left-0 shadow-lg">
+            <a href="index.html" class="block py-3 px-6 hover:bg-gray-50">หน้าหลัก</a>
+            <a href="about.html" class="block py-3 px-6 bg-blue-50 text-custom-blue font-bold">เกี่ยวกับฉัน</a>
+            <a href="certificates.html" class="block py-3 px-6 hover:bg-gray-50">เกียรติบัตร</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-6 pt-32 pb-16">
+        
+        <!-- Intro Section -->
+        <div class="flex flex-col md:flex-row gap-12 items-start mb-20 fade-in-up">
+            <!-- Info Card (Left Side) -->
+            <div class="w-full md:w-1/3 bg-white p-8 rounded-2xl shadow-xl border-t-4 border-custom-yellow">
+                <h3 class="text-2xl font-bold text-custom-blue mb-6 border-b pb-4 font-head">ข้อมูลติดต่อ</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-custom-blue"><i class="fas fa-phone"></i></div>
+                        <div><p class="text-xs text-gray-500">เบอร์โทร</p><p class="font-medium">063-886-1685</p></div>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-custom-blue"><i class="fas fa-envelope"></i></div>
+                        <div><p class="text-xs text-gray-500">อีเมล</p><p class="font-medium text-sm">tanakritmkk@gmail.com</p></div>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-custom-blue"><i class="fas fa-map-marker-alt"></i></div>
+                        <div><p class="text-xs text-gray-500">ที่อยู่</p><p class="font-medium text-sm">108 บ้านแม่โกนเกน จ.ตาก</p></div>
+                    </li>
+                </ul>
+
+                <!-- Action Buttons Area -->
+                <div class="mt-8 pt-6 border-t border-gray-100 flex flex-col gap-3">
+                    
+                    <!-- GitHub Button -->
+                    <a href="https://github.com/TanakitB1" target="_blank" class="group flex items-center justify-center gap-3 w-full bg-gray-900 text-white py-3 rounded-xl shadow-md hover:bg-gray-800 hover:-translate-y-1 transition-all duration-300">
+                        <i class="fab fa-github text-2xl group-hover:rotate-12 transition-transform"></i>
+                        <span class="font-bold font-head">ไปที่ GitHub ของฉัน</span>
+                    </a>
+
+                    <!-- 🔴 Curriculum Download Button (ย้ายมาตรงนี้แล้วครับ) -->
+                    <a href="..\File\โครงสร้างหลักสูตร.pdf" target="_blank" class="group flex items-center justify-center gap-3 w-full bg-custom-blue text-white py-3 rounded-xl shadow-md hover:bg-blue-800 hover:-translate-y-1 transition-all duration-300">
+                        <i class="fas fa-file-download text-xl group-hover:bounce transition-transform"></i>
+                        <span class="font-bold font-head">ดาวน์โหลดโครงสร้างหลักสูตร</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Bio & Skills (Right Side) -->
+            <div class="w-full md:w-2/3">
+                <h2 class="text-4xl font-bold text-custom-blue mb-6 font-head">เกี่ยวกับฉัน</h2>
+                <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-custom-blue mb-8 relative overflow-hidden">
+                     <div class="absolute -right-4 -bottom-4 text-9xl text-blue-100 opacity-50 rotate-12 pointer-events-none">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <p class="text-lg leading-relaxed text-gray-700 relative z-10">
+                        "สนใจการพัฒนาเว็บไซต์และต้องการฝึกงานในตำแหน่ง Web Developer เพื่อพัฒนาทักษะการทำงานจริง 
+                        มีพื้นฐาน HTML, CSS, JavaScript, Python และ MongoDB รวมถึงประสบการณ์ใช้ GitHub และ VS Code 
+                        ปัจจุบันกำลังเรียนรู้ React เพื่อต่อยอดด้าน Frontend"
+                    </p>
+                </div>
+                
+                <!-- Hard Skills Grid -->
+                <h3 class="text-2xl font-bold text-custom-blue mb-4 font-head"><i class="fas fa-laptop-code mr-2 text-custom-yellow"></i>ทักษะทางเทคนิค (Hard Skills)</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="p-4 bg-white rounded-lg shadow text-center border hover:border-custom-yellow transition hover:-translate-y-1 transform duration-300">
+                        <i class="fab fa-html5 text-3xl text-orange-500 mb-2"></i><p class="font-bold">HTML5</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow text-center border hover:border-custom-yellow transition hover:-translate-y-1 transform duration-300">
+                        <i class="fab fa-css3-alt text-3xl text-blue-500 mb-2"></i><p class="font-bold">CSS3</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow text-center border hover:border-custom-yellow transition hover:-translate-y-1 transform duration-300">
+                        <i class="fab fa-js text-3xl text-yellow-400 mb-2"></i><p class="font-bold">JavaScript</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow text-center border hover:border-custom-yellow transition hover:-translate-y-1 transform duration-300">
+                        <i class="fab fa-python text-3xl text-blue-600 mb-2"></i><p class="font-bold">Python</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow text-center border hover:border-custom-yellow transition hover:-translate-y-1 transform duration-300">
+                        <i class="fas fa-database text-3xl text-green-500 mb-2"></i><p class="font-bold">MongoDB</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow text-center border hover:border-custom-yellow transition hover:-translate-y-1 transform duration-300">
+                        <i class="fab fa-github text-3xl text-gray-700 mb-2"></i><p class="font-bold">GitHub</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow text-center border hover:border-custom-yellow transition hover:-translate-y-1 transform duration-300">
+                        <i class="fab fa-react text-3xl text-blue-400 mb-2"></i><p class="font-bold">React</p>
+                    </div>
+                </div>
+
+                <!-- Soft Skills Section -->
+                <h3 class="text-2xl font-bold text-custom-blue mb-4 font-head"><i class="fas fa-users-cog mr-2 text-custom-yellow"></i>ทักษะการทำงาน (Soft Skills)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-white p-5 rounded-lg shadow border-l-4 border-red-400 hover:shadow-md transition">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-hourglass-half text-xl text-red-500"></i>
+                            <h4 class="font-bold text-gray-800">Time Management</h4>
+                        </div>
+                        <p class="text-sm text-gray-600">ทำงานร่วมกับทีมภายใต้เวลาที่จำกัด</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow border-l-4 border-yellow-400 hover:shadow-md transition">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-user-clock text-xl text-yellow-500"></i>
+                            <h4 class="font-bold text-gray-800">Responsibility</h4>
+                        </div>
+                        <p class="text-sm text-gray-600">มีความรับผิดชอบและตรงต่อเวลา</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow border-l-4 border-blue-400 hover:shadow-md transition">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-comments text-xl text-blue-500"></i>
+                            <h4 class="font-bold text-gray-800">Communication</h4>
+                        </div>
+                        <p class="text-sm text-gray-600">แก้ปัญหาเฉพาะหน้าและสื่อสารกับทีมได้ดี</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow border-l-4 border-green-400 hover:shadow-md transition">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-calendar-check text-xl text-green-500"></i>
+                            <h4 class="font-bold text-gray-800">Activity Planning</h4>
+                        </div>
+                        <p class="text-sm text-gray-600">ร่วมวางแผนและจัดกิจกรรมของมหาวิทยาลัย</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow border-l-4 border-purple-400 hover:shadow-md transition">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-hands-helping text-xl text-purple-500"></i>
+                            <h4 class="font-bold text-gray-800">Coordination</h4>
+                        </div>
+                        <p class="text-sm text-gray-600">ทำงานร่วมกับผู้อื่นและประสานงานกับหลายฝ่าย</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Education Compact Grid -->
+        <div class="fade-in-up">
+            <h2 class="text-2xl font-bold text-custom-blue mb-6 text-center font-head">ประวัติการศึกษา</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- University -->
+                <div class="bg-white p-5 rounded-xl shadow-md border-t-4 border-custom-yellow hover:shadow-lg transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xs font-bold text-custom-blue bg-blue-100 px-2 py-1 rounded">ปัจจุบัน</span>
+                        <i class="fas fa-graduation-cap text-custom-yellow text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800">มหาวิทยาลัยพะเยา</h3>
+                    <p class="text-sm text-gray-500">ระดับปริญญาตรี</p>
+                </div>
+                <!-- High School -->
+                <div class="bg-white p-5 rounded-xl shadow-md border-t-4 border-custom-blue hover:shadow-lg transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xs font-bold text-gray-500 bg-gray-100 px-2 py-1 rounded">2020 - 2023</span>
+                        <i class="fas fa-school text-custom-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800">โรงเรียนแม่กุวิทยาคม</h3>
+                    <p class="text-sm text-gray-500">มัธยมศึกษาตอนปลาย</p>
+                    <p class="text-sm font-bold text-custom-yellow mt-1">GPAX 3.87</p>
+                </div>
+                <!-- Middle School -->
+                <div class="bg-white p-5 rounded-xl shadow-md border-t-4 border-custom-blue hover:shadow-lg transition">
+                     <div class="flex justify-between items-start mb-2">
+                        <span class="text-xs font-bold text-gray-500 bg-gray-100 px-2 py-1 rounded">2017 - 2020</span>
+                        <i class="fas fa-book-reader text-custom-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800">โรงเรียนบ้านแม่โกนเกน</h3>
+                    <p class="text-sm text-gray-500">มัธยมศึกษาตอนต้น</p>
+                    <p class="text-sm font-bold text-custom-yellow mt-1">GPAX 3.50</p>
+                </div>
+            </div>
+            
+            <!-- (ปุ่มดาวน์โหลดเคยอยู่ตรงนี้ ตอนนี้ย้ายไปข้างบนแล้วครับ) -->
+
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
