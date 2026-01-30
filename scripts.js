@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Typewriter Effect ---
     const textElement = document.getElementById('typewriter');
     if (textElement) {
-        const phrases = ["Web Developer", "Frontend Enthusiast", "Learner"];
+        const phrases = ["Web Developer", "Frontend Developer", "Learner"];
         let phraseIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -65,5 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.fade-in-up').forEach(el => {
         observer.observe(el);
     });
+
 
 });
